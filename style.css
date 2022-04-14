@@ -1,0 +1,203 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+  }
+  body{
+      background-color: white;
+  }
+#header{
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+#header button {
+    width: 8rem;
+    height: 4rem;
+    margin:1rem 0.5rem;
+    border:none;
+    font-size: 1.25rem;
+    border-radius: 10px;
+    background-color: rgb(220, 221, 225);
+    color:black;
+}
+
+#header button:hover {
+    transform: scale(1.05);
+    color:white;
+    background-color:rgb(44, 62, 80);
+}
+#breadcrumb{
+    /* border: 1px solid black; */
+    margin: 10px;
+    display: flex;
+}
+
+#breadcrumb a {
+    color:white;
+    background-color: rgb(44, 62, 80);
+    padding: 10px;
+    border-right: 5px solid grey;
+}
+
+#breadcrumb a:hover {
+    background-color: #d63031;
+    text-decoration: underline;
+}
+
+#container{
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.folder,.text-file{
+    margin: 0.5rem;
+    height:130px;
+    width:9rem;
+    border-radius: 12px;
+    background-color:rgb(44, 62, 80); 
+    text-align: center;
+    padding: 1rem 0rem;
+    overflow-wrap:break-word;
+    background-image: url("/images.png");
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.text-file{
+  background-image: url("/file.png");
+  height:130px;
+  width:145px;
+
+}
+
+div[purpose="name"]{
+    color: white;
+    width: 100%;
+    height: 92%;
+    padding: 20%;
+}
+span[action]{
+  cursor:pointer;
+  user-select: none;
+  color:rgb(220, 221, 225);
+}
+span[action]:hover{
+  color:rgb(194, 54, 22);
+  font-size: 1.3rem;
+}
+
+
+#app{
+    width:98.5%;
+    border: 10px solid rgb(44, 62, 80);
+    margin: 10px 10px;
+    position:absolute;
+    top:0;
+    display: none;
+
+}
+
+#app-title-bar {
+    display: flex;
+    background-color: #0984e3;
+    height: 25px;
+}
+
+#app-title {
+    width: 95.5%;
+    color: white;
+    text-align: center;
+    /* border-right: 7px solid red; */
+}
+
+#app-menu-bar {
+    display: flex;
+    background-color: #2d3436;
+    height: 40px;
+}
+
+#app-body {
+    display: flex;
+    background-color:springgreen;
+    height: 500px;
+}
+
+.notepad-menu{
+    width: 100%;
+    padding: 5px;
+}
+
+.notepad-menu * {
+    margin: 0px 5px;
+    padding: 2px;
+    cursor: pointer;
+    border: 2px solid white;
+    border-radius: 5px;
+}
+
+.notepad-menu span {
+    vertical-align: bottom;
+    
+}
+
+.notepad-menu span:hover {
+    border: 2px solid black;
+    background-color: white;
+    color: teal;
+}
+
+
+.notepad-menu [pressed=true] {
+    border: 2px solid black;
+    background-color: white;
+    color: teal;
+}
+
+.notepad-menu input[type=color] {
+    width: 30px;
+}
+
+.notepad-menu select {
+    height: 30px;
+}
+
+.notepad-body {
+    height: 100%;
+    width: 100%;
+}
+
+.notepad-body textarea{
+    height: 100%;
+    width: 100%;
+    font-size: 22px;
+    outline: none;
+    resize: none;
+    padding: 10px;
+}
+
+[purpose=download]{
+    display: none;
+}
+
+/* input[action=upload]{
+    display: none;
+} */
+
+#win-actions span {
+    cursor: pointer;
+    color: white;
+}
+
+#win-actions span:hover {
+    background-color: black;
+}
+#win-actions .close:hover {
+        background-color: red;
+}
+.notepad-menu input[action=upload]{
+    display: none;
+}

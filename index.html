@@ -1,0 +1,87 @@
+
+<html>
+    <head>
+        <title>File Manager</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div id="header">
+            <button id="addFolder">Add Folder</button>
+            <button id="addTextFile">Add Text File</button>
+        </div>
+
+        <div id="breadcrumb">
+            <a purpose='path' rid="-1">Root</a>
+        </div>
+
+        <div id="container">
+        </div>
+
+        <div id="app">
+            <div id="app-title-bar">
+                <div id="app-title">Title will come here</div>
+                <div id="win-actions">
+                    <span class="material-icons fullscreen">fullscreen</span>
+                    <span class="material-icons close" >close</span>
+                </div>
+            </div>
+            <div id="app-menu-bar"></div>
+            <div id="app-body"></div>
+        </div>
+
+        <template id="templates">
+            <div class="folder" rid="" pid="">
+                <span action="rename">rename</span>
+                <span action="delete">delete</span>
+                <span action="view">view</span>
+                <div purpose="name"></div>
+            </div>
+            <div class="text-file" rid="" pid="">
+                <span action="rename">rename</span>
+                <span action="delete">delete</span>
+                <span action="view">view</span>
+                <div purpose="name"></div>
+            </div>
+            <a purpose='path' rid="-1">Root</a>
+            <div purpose="notepad-menu" class="notepad-menu">
+                <span action="save" class="material-icons">save</span>
+                <span pressed="false" action="bold" class="material-icons">format_bold</span>
+                <span pressed="false" action="italic" class="material-icons">format_italic</span>
+                <span pressed="false" action="underline" class="material-icons">format_underline</span>
+                <input type="color" action="bg-color" />
+                <input type="color" action="fg-color" />
+                <select action="font-family">
+                    <option value="monospace">monospace</option>
+                    <option value="serif">serif</option>
+                    <option value="sans-serif">sans-serif</option>
+                    <option value="cursive">cursive</option>
+                    <option value="Times New Roman">Times New Roman</option>
+                </select>
+                <select action="font-size">
+                    <option value="8">8</option>
+                    <option value="10">10</option>
+                    <option value="12">12</option>
+                    <option value="14">14</option>
+                    <option value="16">16</option>
+                    <option value="18">18</option>
+                    <option value="20">20</option>
+                    <option value="22" selected>22</option>
+                    <option value="24">24</option>
+                    <option value="28">28</option>
+                    <option value="32">32</option>
+                    <option value="48">48</option>
+                </select>
+                <span action="download" class="material-icons">download</span>
+                <span action="forupload" class="material-icons">upload</span>
+                <input action="upload" type="file"/>
+                <a purpose="download" href="http://www.google.com" target="_blank">Link</a>
+            </div>
+            <div purpose='notepad-body' class="notepad-body">
+                <textarea>I am notepad's body</textarea>
+            </div>
+        </template>
+        <script type="text/javascript" src="fileFunc.js"></script>
+        <script type="text/javascript" src="main.js"></script>
+    </body>
+</html>
