@@ -66,6 +66,16 @@
     overflow-wrap:break-word;
     background-image: url("/images.png");
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    animation-name: scale-tools;
+    animation-duration: 0.5s;
+}
+@keyframes scale-tools {
+    0%{
+        transform: scale(0.1);
+    }
+    100%{
+        transform: scale(1);
+    }
 }
 .text-file{
   background-image: url("/file.png");
