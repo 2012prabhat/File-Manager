@@ -108,6 +108,8 @@ span[action]:hover{
     position:absolute;
     top:0;
     display: none;
+    animation: scale-tools;
+    animation-duration: 0.5s;
 
 }
 
